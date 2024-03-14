@@ -82,7 +82,7 @@ app.get("/api/data", async (req, res) => {
   }
 });
 
-const job = schedule.scheduleJob("*/1 * * * *", async () => {
+const job = schedule.scheduleJob("0 8 * * *", async () => {
   try {
     // Thực hiện cuộc gọi API
     await axios.post(`http://localhost:${port}/api/data`);
