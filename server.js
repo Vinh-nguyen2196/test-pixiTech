@@ -96,6 +96,7 @@ const job = schedule.scheduleJob("0 8 * * *", async () => {
 // listen for requests
 
 //Yêu cầu đề bài không ghi rõ là có cần lưu lại lịch sử giá coin hay k nên em chỉ dùng 1 bản ghi
+//Trường hợp mỗi lần sync dữ liệu về tạo một bản ghi mới thì truy vấn lấy bản ghi latest bằng cách truy vấn sort theo id và lấy limit=1 để lấy bản ghi cuối cùng
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
